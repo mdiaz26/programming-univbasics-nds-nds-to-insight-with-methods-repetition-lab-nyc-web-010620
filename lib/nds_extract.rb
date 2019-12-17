@@ -25,13 +25,13 @@ def gross_for_director(d)
 end
 
 def list_of_directors(source)
-  list_of_directors = []
+  list = []
   count = 0 
   while count < source[count].length
-    list_of_directors << source[count]
+    list << source[count]
     count += 1 
   end
-  list_of_directors
+  list
 end
 
 def total_gross(source)
@@ -46,13 +46,13 @@ def total_gross(source)
   # return the total
   running_total = 0 
   counter = 0 
+  
   while counter < source[counter].length
     # I will have a hash with :name => gross for each director. First I need to provide the info to the directors_totals method.
     directors_info = source[counter]
     running_total += directors_totals(directors_info)
     counter += 1 
   end
-running_total
 end
 
 
